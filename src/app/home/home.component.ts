@@ -12,4 +12,10 @@ export class HomeComponent implements OnInit {
   onLoadServers() {
     this.router.navigate(['servers']);
   }
+  onLoadServer(n: number) {
+    this.router.navigate(['servers', 10, 'edit'], {
+      queryParams: { allowEdit: 1 },
+      fragment: 'loading',
+    });
+  }
 }
